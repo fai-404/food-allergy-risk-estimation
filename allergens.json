@@ -1,0 +1,55 @@
+{
+  "milk": [
+    "milk",
+    "cream",
+    "paneer",
+    "cheese",
+    "khoya"
+  ],
+  "curd": [
+    "curd",
+    "yogurt"
+  ],
+  "butter": [
+    "butter",
+    "ghee",
+    "margarine"
+  ],
+  "eggs": [
+    "egg"
+  ],
+  "gluten": [
+    "wheat",
+    "maida",
+    "flour",
+    "bread"
+  ],
+  "nuts": [
+    "cashew",
+    "nuts",
+    "almond",
+    "walnut",
+    "peanut"
+  ],
+  "fish": [
+    "fish"
+  ],
+  "shellfish": [
+    "prawn",
+    "shellfish",
+    "shrimp"
+  ],
+  "coconut": [
+    "coconut",
+    "coconut milk"
+  ],
+  "soy": [
+    "soy",
+    "tofu"
+  ],
+  "spices": [
+    "spices",
+    "pepper",
+    "chilli"
+  ]
+}
