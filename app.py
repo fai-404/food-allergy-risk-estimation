@@ -83,7 +83,7 @@ def check_allergens(dish_name, user_allergens):
 # ── Routes ──
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('landing.html')
 
 
 @app.route('/predict', methods=['POST'])
