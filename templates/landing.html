@@ -7,90 +7,39 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #faf7f2;
-      --surface: #ffffff;
-      --surface2: #f3ede3;
-      --border: #e8dfd0;
-      --text: #1a1208;
-      --muted: #8a7a60;
-      --accent: #d45c1e;
-      --safe: #1e8449;
-      --warn: #d68910;
-      --danger: #c0392b;
+      --bg: #faf7f2; --surface: #ffffff; --surface2: #f3ede3;
+      --border: #e8dfd0; --text: #1a1208; --muted: #8a7a60;
+      --accent: #d45c1e; --safe: #1e8449; --warn: #d68910; --danger: #c0392b;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
 
-    nav {
-      display: flex; align-items: center; gap: 12px;
-      padding: 18px 40px; background: white;
-      border-bottom: 1px solid var(--border);
-    }
+    /* NAV */
+    nav { display: flex; align-items: center; gap: 12px; padding: 18px 40px; background: white; border-bottom: 1px solid var(--border); }
     .logo-mark { width: 36px; height: 36px; background: var(--accent); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
     .logo-text { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; }
     .logo-text span { color: var(--accent); }
     .nav-badge { margin-left: auto; background: rgba(212,92,30,0.1); color: var(--accent); font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 12px; border-radius: 99px; }
 
-    .hero {
-      flex: 1; display: flex; align-items: center; justify-content: center;
-      padding: 72px 24px;
-    }
+    /* HERO */
+    .hero { display: flex; align-items: center; justify-content: center; padding: 72px 24px; }
     .hero-inner { max-width: 660px; width: 100%; text-align: center; }
-
-    .eyebrow {
-      display: inline-flex; align-items: center; gap: 7px;
-      background: rgba(212,92,30,0.1); color: var(--accent);
-      font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
-      padding: 6px 14px; border-radius: 99px; margin-bottom: 26px;
-    }
-
-    .hero-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 58px; font-weight: 900;
-      line-height: 1.04; letter-spacing: -1.5px; margin-bottom: 20px;
-    }
+    .eyebrow { display: inline-flex; align-items: center; gap: 7px; background: rgba(212,92,30,0.1); color: var(--accent); font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 6px 14px; border-radius: 99px; margin-bottom: 26px; }
+    .hero-title { font-family: 'Playfair Display', serif; font-size: 58px; font-weight: 900; line-height: 1.04; letter-spacing: -1.5px; margin-bottom: 20px; }
     .hero-title em { font-style: italic; color: var(--accent); }
-
-    .hero-desc {
-      color: var(--muted); font-size: 16px; line-height: 1.75;
-      font-weight: 300; margin-bottom: 40px;
-      max-width: 480px; margin-left: auto; margin-right: auto;
-    }
-
+    .hero-desc { color: var(--muted); font-size: 16px; line-height: 1.75; font-weight: 300; margin-bottom: 40px; max-width: 480px; margin-left: auto; margin-right: auto; }
     .cta-group { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; margin-bottom: 28px; }
-
-    .btn-primary {
-      background: var(--accent); color: white; border: none;
-      border-radius: 13px; padding: 15px 34px;
-      font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600;
-      cursor: pointer; transition: all 0.2s; text-decoration: none;
-      display: inline-flex; align-items: center; gap: 8px;
-    }
+    .btn-primary { background: var(--accent); color: white; border: none; border-radius: 13px; padding: 15px 34px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
     .btn-primary:hover { background: #b84d18; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(212,92,30,0.35); }
-
-    .btn-secondary {
-      background: transparent; color: var(--text);
-      border: 1.5px solid var(--border); border-radius: 13px; padding: 14px 28px;
-      font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500;
-      cursor: pointer; transition: all 0.2s; text-decoration: none;
-      display: inline-flex; align-items: center; gap: 8px;
-    }
+    .btn-secondary { background: transparent; color: var(--text); border: 1.5px solid var(--border); border-radius: 13px; padding: 14px 28px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; cursor: pointer; transition: all 0.2s; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
     .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
-
-    .trust-row {
-      display: flex; align-items: center; justify-content: center;
-      gap: 6px; font-size: 12px; color: var(--muted);
-    }
+    .trust-row { display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 12px; color: var(--muted); }
     .trust-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--safe); }
     .trust-sep { color: var(--border); }
 
-    /* preview card */
+    /* Preview card */
     .preview-wrap { margin: 52px auto 0; max-width: 400px; position: relative; }
-    .preview-card {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 20px; padding: 24px; text-align: left;
-      box-shadow: 0 16px 48px rgba(26,18,8,0.1);
-    }
+    .preview-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 24px; text-align: left; box-shadow: 0 16px 48px rgba(26,18,8,0.1); }
     .preview-label { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
     .preview-dish { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; margin-bottom: 12px; }
     .preview-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
@@ -99,32 +48,70 @@
     .preview-risk { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 10px; background: rgba(214,137,16,0.08); }
     .preview-risk-title { font-size: 14px; font-weight: 700; color: var(--warn); }
     .preview-risk-sub { font-size: 11px; color: var(--muted); margin-top: 1px; }
-
-    .float-chip {
-      position: absolute; top: -14px; right: -14px;
-      background: var(--text); color: var(--bg);
-      font-size: 12px; font-weight: 600;
-      padding: 9px 14px; border-radius: 10px;
-      box-shadow: 0 6px 20px rgba(26,18,8,0.18);
-      display: flex; align-items: center; gap: 6px;
-    }
+    .float-chip { position: absolute; top: -14px; right: -14px; background: var(--text); color: var(--bg); font-size: 12px; font-weight: 600; padding: 9px 14px; border-radius: 10px; box-shadow: 0 6px 20px rgba(26,18,8,0.18); display: flex; align-items: center; gap: 6px; }
     .float-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
 
-    footer {
-      background: white; border-top: 1px solid var(--border);
-      padding: 20px 40px; text-align: center;
-      font-size: 11px; color: var(--muted);
-    }
+    /* FACTS & NEWS SECTION */
+    .bottom-section { max-width: 960px; margin: 0 auto 60px; padding: 0 24px; }
+    .section-divider { border: none; border-top: 1px solid var(--border); margin: 64px 0 48px; }
+    .section-heading { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; margin-bottom: 6px; }
+    .section-heading span { color: var(--accent); }
+    .section-sub { color: var(--muted); font-size: 14px; font-weight: 300; margin-bottom: 28px; }
+
+    .stats-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 32px; }
+    .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 20px; text-align: center; box-shadow: 0 2px 10px rgba(26,18,8,0.05); }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--accent); line-height: 1; margin-bottom: 6px; }
+    .stat-label { font-size: 12px; color: var(--muted); font-weight: 500; line-height: 1.4; }
+
+    .facts-news-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .facts-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 28px; box-shadow: 0 2px 12px rgba(26,18,8,0.05); }
+    .facts-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+    .facts-icon { width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+    .facts-card-title { font-size: 15px; font-weight: 700; }
+    .facts-card-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
+    .fact-item { display: flex; align-items: flex-start; gap: 10px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+    .fact-item:last-child { border-bottom: none; }
+    .fact-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0; margin-top: 5px; }
+    .fact-text { font-size: 13px; line-height: 1.6; }
+    .fact-text strong { color: var(--accent); }
+    .allergen-profiles { display: flex; flex-direction: column; gap: 10px; }
+    .profile-item { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 10px; background: var(--surface2); transition: all 0.2s; }
+    .profile-item:hover { background: rgba(212,92,30,0.06); }
+    .profile-emoji { font-size: 20px; flex-shrink: 0; }
+    .profile-info { flex: 1; }
+    .profile-name { font-size: 13px; font-weight: 600; }
+    .profile-desc { font-size: 11px; color: var(--muted); margin-top: 2px; }
+    .profile-severity { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 3px 9px; border-radius: 99px; }
+    .sev-high   { background: rgba(192,57,43,0.12); color: var(--danger); }
+    .sev-medium { background: rgba(214,137,16,0.12); color: var(--warn); }
+    .sev-low    { background: rgba(30,132,73,0.12);  color: var(--safe); }
+    .news-item { padding: 14px 0; border-bottom: 1px solid var(--border); }
+    .news-item:last-child { border-bottom: none; }
+    .news-tag { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 9px; border-radius: 99px; margin-bottom: 6px; }
+    .news-tag-research { background: rgba(45,141,196,0.12); color: #2d8dc4; }
+    .news-tag-tip      { background: rgba(30,132,73,0.12);  color: var(--safe); }
+    .news-tag-warning  { background: rgba(192,57,43,0.12);  color: var(--danger); }
+    .news-tag-update   { background: rgba(212,92,30,0.12);  color: var(--accent); }
+    .news-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; line-height: 1.4; }
+    .news-desc  { font-size: 12px; color: var(--muted); line-height: 1.5; }
+    .tip-banner { background: var(--text); color: var(--bg); border-radius: 16px; padding: 24px 28px; display: flex; align-items: center; gap: 16px; margin-top: 24px; }
+    .tip-banner-icon { font-size: 32px; flex-shrink: 0; }
+    .tip-banner-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .tip-banner-desc  { font-size: 13px; opacity: 0.65; line-height: 1.5; }
+
+    footer { background: white; border-top: 1px solid var(--border); padding: 20px 40px; text-align: center; font-size: 11px; color: var(--muted); }
 
     @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
     .hero-inner { animation: fadeUp 0.5s ease both; }
     .preview-wrap { animation: fadeUp 0.5s 0.1s ease both; }
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       nav { padding: 16px 20px; }
       .hero-title { font-size: 38px; }
       .preview-wrap { display: none; }
       .hero { padding: 56px 20px; }
+      .stats-bar { grid-template-columns: 1fr 1fr; }
+      .facts-news-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -136,17 +123,16 @@
   <div class="nav-badge">AI Powered</div>
 </nav>
 
+<!-- HERO -->
 <div class="hero">
   <div class="hero-inner">
     <div class="eyebrow">✦ AI Food Allergy Estimator</div>
     <h1 class="hero-title">Know What's<br>in Your <em>Food.</em></h1>
     <p class="hero-desc">Upload a photo of any dish, pick your allergens, and get an instant risk assessment — powered by AI.</p>
-
     <div class="cta-group">
       <a href="/scan" class="btn-primary">🔍 Scan Your Food</a>
-      <a href="/scan" class="btn-secondary">Learn More →</a>
+      <a href="#facts" class="btn-secondary">Learn More ↓</a>
     </div>
-
     <div class="trust-row">
       <div class="trust-dot"></div>
       <span>No login required</span>
@@ -155,7 +141,6 @@
       <span class="trust-sep">·</span>
       <span>Results in seconds</span>
     </div>
-
     <div class="preview-wrap">
       <div class="float-chip"><div class="float-dot"></div> 91% confidence</div>
       <div class="preview-card">
@@ -177,6 +162,81 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- FACTS & NEWS -->
+<div class="bottom-section" id="facts">
+  <hr class="section-divider">
+  <div class="section-heading">Allergy <span>Facts</span> & Insights</div>
+  <div class="section-sub">Understanding food intolerances and allergies — key information to keep you safe</div>
+
+  <div class="stats-bar">
+    <div class="stat-card"><div class="stat-num">32M</div><div class="stat-label">People with food allergies in the US alone</div></div>
+    <div class="stat-card"><div class="stat-num">14</div><div class="stat-label">Major allergens recognized globally by WHO</div></div>
+    <div class="stat-card"><div class="stat-num">200K</div><div class="stat-label">ER visits yearly due to food allergies</div></div>
+    <div class="stat-card"><div class="stat-num">3×</div><div class="stat-label">Rise in food allergies over last 20 years</div></div>
+  </div>
+
+  <div class="facts-news-grid">
+
+    <div class="facts-card">
+      <div class="facts-card-header">
+        <div class="facts-icon" style="background:rgba(212,92,30,0.1)">💡</div>
+        <div><div class="facts-card-title">Did You Know?</div><div class="facts-card-sub">Important facts about food allergies</div></div>
+      </div>
+      <div class="fact-item"><div class="fact-dot"></div><div class="fact-text">Food <strong>allergy</strong> involves the immune system reacting to a protein, while food <strong>intolerance</strong> is a digestive issue — completely different conditions.</div></div>
+      <div class="fact-item"><div class="fact-dot"></div><div class="fact-text"><strong>Milk allergy</strong> is one of the most common in children, but around 80% of children outgrow it by age 16.</div></div>
+      <div class="fact-item"><div class="fact-dot"></div><div class="fact-text"><strong>Cross-contamination</strong> in shared kitchens is a major hidden risk — even tiny traces of an allergen can trigger a severe reaction.</div></div>
+      <div class="fact-item"><div class="fact-dot"></div><div class="fact-text">South Indian dishes often contain <strong>coconut, mustard seeds, and lentils</strong> — common hidden allergens many people overlook.</div></div>
+      <div class="fact-item"><div class="fact-dot"></div><div class="fact-text"><strong>Ghee</strong> is clarified butter and still contains milk proteins — people with dairy allergy must avoid it even in small amounts.</div></div>
+    </div>
+
+    <div class="facts-card">
+      <div class="facts-card-header">
+        <div class="facts-icon" style="background:rgba(192,57,43,0.1)">⚠️</div>
+        <div><div class="facts-card-title">Common Allergen Profiles</div><div class="facts-card-sub">Severity and what to watch for</div></div>
+      </div>
+      <div class="allergen-profiles">
+        <div class="profile-item"><span class="profile-emoji">🥜</span><div class="profile-info"><div class="profile-name">Tree Nuts & Peanuts</div><div class="profile-desc">Can cause severe anaphylaxis — often hidden in curries and sweets</div></div><span class="profile-severity sev-high">High</span></div>
+        <div class="profile-item"><span class="profile-emoji">🥛</span><div class="profile-info"><div class="profile-name">Milk & Dairy</div><div class="profile-desc">Present in ghee, paneer, cream — very common in Indian dishes</div></div><span class="profile-severity sev-high">High</span></div>
+        <div class="profile-item"><span class="profile-emoji">🌾</span><div class="profile-info"><div class="profile-name">Gluten / Wheat</div><div class="profile-desc">Found in naan, parotta, maida — affects celiac disease patients</div></div><span class="profile-severity sev-high">High</span></div>
+        <div class="profile-item"><span class="profile-emoji">🦐</span><div class="profile-info"><div class="profile-name">Shellfish / Prawn</div><div class="profile-desc">Very common in Kerala cuisine — triggers immune response quickly</div></div><span class="profile-severity sev-medium">Medium</span></div>
+        <div class="profile-item"><span class="profile-emoji">🥥</span><div class="profile-info"><div class="profile-name">Coconut</div><div class="profile-desc">Used extensively in South Indian cooking — often underestimated</div></div><span class="profile-severity sev-medium">Medium</span></div>
+        <div class="profile-item"><span class="profile-emoji">🌶️</span><div class="profile-info"><div class="profile-name">Spices</div><div class="profile-desc">Coriander, cumin, chilli — intolerance is more common than allergy</div></div><span class="profile-severity sev-low">Low</span></div>
+      </div>
+    </div>
+
+    <div class="facts-card">
+      <div class="facts-card-header">
+        <div class="facts-icon" style="background:rgba(30,132,73,0.1)">🔬</div>
+        <div><div class="facts-card-title">Intolerance vs Allergy</div><div class="facts-card-sub">Know the difference</div></div>
+      </div>
+      <div class="fact-item"><div class="fact-dot" style="background:var(--danger)"></div><div class="fact-text"><strong>Food Allergy:</strong> Immune system reacts to a food protein. Symptoms appear within minutes — hives, swelling, anaphylaxis. Even tiny amounts can trigger it.</div></div>
+      <div class="fact-item"><div class="fact-dot" style="background:var(--warn)"></div><div class="fact-text"><strong>Food Intolerance:</strong> Digestive system can't properly process a food. Symptoms are slower — bloating, cramps, diarrhea. Usually dose-dependent.</div></div>
+      <div class="fact-item"><div class="fact-dot" style="background:var(--safe)"></div><div class="fact-text"><strong>Lactose Intolerance</strong> is NOT the same as milk allergy. Lactose-intolerant people can often tolerate small amounts of dairy unlike those with milk allergy.</div></div>
+      <div class="fact-item"><div class="fact-dot" style="background:var(--safe)"></div><div class="fact-text"><strong>Celiac Disease</strong> is an autoimmune reaction to gluten — different from gluten sensitivity, which is milder and doesn't damage the intestine lining.</div></div>
+    </div>
+
+    <div class="facts-card">
+      <div class="facts-card-header">
+        <div class="facts-icon" style="background:rgba(45,141,196,0.1)">📰</div>
+        <div><div class="facts-card-title">Allergy News & Updates</div><div class="facts-card-sub">Recent research and tips</div></div>
+      </div>
+      <div class="news-item"><span class="news-tag news-tag-research">Research</span><div class="news-title">Early exposure may reduce peanut allergy risk in infants</div><div class="news-desc">Studies show introducing peanut-containing foods early (4–6 months) significantly lowers the risk of developing peanut allergy later in life.</div></div>
+      <div class="news-item"><span class="news-tag news-tag-tip">Tip</span><div class="news-title">Always check restaurant menus for allergen disclosures</div><div class="news-desc">Many Indian restaurants now list the 14 major allergens on menus — always ask staff if you don't see it displayed clearly.</div></div>
+      <div class="news-item"><span class="news-tag news-tag-warning">Warning</span><div class="news-title">Sesame added as 9th major allergen in the US (2023)</div><div class="news-desc">Sesame seeds and sesame oil must now be declared on all packaged food labels in the United States under FASTER Act.</div></div>
+      <div class="news-item"><span class="news-tag news-tag-update">Update</span><div class="news-title">AI food recognition tools being integrated into allergy apps</div><div class="news-desc">Multiple health apps are now using MobileNet-based models similar to AllerScan to help users identify allergens from food photos in real time.</div></div>
+    </div>
+
+  </div>
+
+  <div class="tip-banner">
+    <div class="tip-banner-icon">🏥</div>
+    <div>
+      <div class="tip-banner-title">Important Disclaimer</div>
+      <div class="tip-banner-desc">AllerScan is an AI-based estimation tool for educational purposes only. It is not a substitute for professional medical advice. Always consult a doctor or allergist for a confirmed diagnosis and personalized allergy management plan.</div>
     </div>
   </div>
 </div>
