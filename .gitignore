@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-*.keras
-*.h5
-__pycache__/
-=======
 venv/
 __pycache__/
 *.h5
 dataset/
->>>>>>> 9f8a43f1c99508394086f07a5170e60cd2ce9e47
