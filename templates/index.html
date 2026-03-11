@@ -286,7 +286,7 @@
       <div class="card-label">Select Your Allergens</div>
       <div class="allergen-grid" id="allergenGrid"></div>
 
-      <button class="btn-scan" id="scanBtn" onclick="runScan()" disabled>🔍 Scan for Allergens</button>
+      <button class="btn-scan" id="scanBtn" onclick="runScan()" disabled>Scan for Allergens</button>
 
       <div class="loading" id="loadingDiv">
         <div class="spinner"></div>
@@ -500,7 +500,35 @@
 
   // ── Results ──
   function showResults(data) {
-    if (data.error) { alert(data.error); return; }
+    if (data.error) {
+  document.getElementById('resultsCol').innerHTML = `
+    <div class="result-card">
+      <div class="result-card-title">Scan Result</div>
+
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+        <div style="font-size:28px">⚠️</div>
+        <div style="font-size:20px;font-weight:700;color:var(--danger)">
+          No Food Detected
+        </div>
+      </div>
+
+      <div style="font-size:14px;color:var(--muted);margin-bottom:10px">
+        ${data.error}
+      </div>
+
+      <div style="font-size:13px;color:var(--muted)">
+        Model confidence: ${data.confidence}%
+      </div>
+
+      <div style="margin-top:16px">
+        <button onclick="clearImage()" class="btn-scan" style="padding:10px 14px">
+          Try Another Image
+        </button>
+      </div>
+    </div>
+  `;
+  return;
+}
     const flaggedIngs = data.triggered.map(t => t.found_ingredient);
     const riskClass = data.risk_level === 'HIGH' ? 'risk-high' : data.risk_level === 'MEDIUM' ? 'risk-medium' : 'risk-safe';
     const riskIcon  = data.risk_level === 'HIGH' ? '🚨' : data.risk_level === 'MEDIUM' ? '⚠️' : '✅';
