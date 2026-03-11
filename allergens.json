@@ -1,16 +1,12 @@
 {
-  "milk": [
+  "dairy": [
     "milk",
     "cream",
     "paneer",
     "cheese",
-    "khoya"
-  ],
-  "curd": [
+    "khoya",
     "curd",
-    "yogurt"
-  ],
-  "butter": [
+    "yogurt",
     "butter",
     "ghee",
     "margarine"
@@ -48,7 +44,6 @@
     "tofu"
   ],
   "spices": [
-    "spices",
     "pepper",
     "chilli"
   ]

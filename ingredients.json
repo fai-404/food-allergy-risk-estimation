@@ -1,211 +1,24 @@
 {
-  "appam_kerala": [
-    "rice",
-    "coconut milk",
-    "coconut",
-    "yeast",
-    "sugar",
-    "oil"
-  ],
-  "beaf_steak": [
-    "beef",
-    "butter",
-    "garlic",
-    "black pepper",
-    "salt",
-    "oil"
-  ],
-  "bhatura": [
-    "maida",
-    "wheat",
-    "curd",
-    "oil",
-    "yeast",
-    "salt"
-  ],
-  "biriyani": [
-    "rice",
-    "chicken",
-    "ghee",
-    "curd",
-    "spices",
-    "onion",
-    "saffron",
-    "mint"
-  ],
-  "chapati": [
-    "wheat",
-    "flour",
-    "oil",
-    "salt",
-    "water"
-  ],
-  "chicken_gravy": [
-    "chicken",
-    "onion",
-    "tomato",
-    "spices",
-    "oil",
-    "garlic",
-    "ginger"
-  ],
-  "chicken_tikka": [
-    "chicken",
-    "curd",
-    "spices",
-    "butter",
-    "oil",
-    "lemon"
-  ],
-  "cupcake": [
-    "wheat",
-    "flour",
-    "milk",
-    "butter",
-    "egg",
-    "sugar",
-    "cream"
-  ],
-  "egg_omlet": [
-    "egg",
-    "milk",
-    "butter",
-    "oil",
-    "salt",
-    "onion"
-  ],
-  "fish_curry_kerala": [
-    "fish",
-    "coconut milk",
-    "coconut",
-    "spices",
-    "tomato",
-    "onion"
-  ],
-  "french_fries": [
-    "potato",
-    "oil",
-    "salt"
-  ],
-  "idli_sambar": [
-    "rice",
-    "lentil",
-    "coconut",
-    "spices",
-    "tomato",
-    "onion",
-    "mustard"
-  ],
-  "masala_dosa": [
-    "rice",
-    "lentil",
-    "potato",
-    "oil",
-    "mustard",
-    "spices"
-  ],
-  "naan": [
-    "maida",
-    "wheat",
-    "milk",
-    "butter",
-    "curd",
-    "yeast",
-    "egg"
-  ],
-  "paneer_butter_masala": [
-    "paneer",
-    "milk",
-    "butter",
-    "cream",
-    "spices",
-    "tomato"
-  ],
-  "parotta_salna": [
-    "maida",
-    "wheat",
-    "egg",
-    "oil",
-    "spices",
-    "tomato",
-    "onion"
-  ],
-  "pizza": [
-    "wheat",
-    "maida",
-    "cheese",
-    "milk",
-    "butter",
-    "tomato",
-    "oil"
-  ],
-  "pongal": [
-    "rice",
-    "lentil",
-    "ghee",
-    "butter",
-    "pepper",
-    "mustard",
-    "cashew",
-    "nuts"
-  ],
-  "prawn_curry": [
-    "prawn",
-    "shellfish",
-    "coconut milk",
-    "coconut",
-    "spices",
-    "onion",
-    "tomato"
-  ],
-  "puttu_kadala": [
-    "rice",
-    "coconut",
-    "lentil",
-    "spices",
-    "onion"
-  ],
-  "samosa": [
-    "maida",
-    "wheat",
-    "potato",
-    "oil",
-    "spices"
-  ],
-  "sandwich": [
-    "wheat",
-    "bread",
-    "egg",
-    "butter",
-    "milk",
-    "cheese"
-  ],
-  "strawberry_cake": [
-    "wheat",
-    "flour",
-    "milk",
-    "butter",
-    "egg",
-    "cream",
-    "sugar"
-  ],
-  "unni_appam": [
-    "rice",
-    "coconut",
-    "banana",
-    "ghee",
-    "butter",
-    "sugar",
-    "nuts"
-  ],
-  "vada_sambar": [
-    "lentil",
-    "rice",
-    "coconut",
-    "spices",
-    "onion",
-    "tomato",
-    "mustard",
-    "oil"
-  ]
+  "appam_kerala": ["rice flour", "coconut milk", "yeast", "sugar"],
+  "beaf_steak": ["beef", "butter", "pepper", "garlic", "salt"],
+  "biriyani": ["rice", "chicken", "yogurt", "ghee", "onion", "spices"],
+  "chapati": ["wheat flour", "water", "salt"],
+  "chicken_fry": ["chicken", "chili powder", "turmeric", "garlic", "oil", "salt"],
+  "chicken_gravy": ["chicken", "onion", "tomato", "garlic", "ginger", "spices", "oil"],
+  "cupcake": ["wheat flour", "egg", "milk", "butter", "sugar", "baking powder"],
+  "egg_omlet": ["egg", "onion", "pepper", "salt", "oil"],
+  "fish_curry_kerala": ["fish", "coconut milk", "tamarind", "garlic", "spices", "curry leaves"],
+  "french_fries": ["potato", "oil", "salt"],
+  "hot_dog": ["wheat bun", "sausage", "mustard", "ketchup"],
+  "idli_sambar": ["rice", "urad dal", "lentils", "spices", "tamarind"],
+  "masala_dosa": ["rice", "urad dal", "potato", "spices", "oil"],
+  "paneer_butter_masala": ["paneer", "butter", "cream", "tomato", "spices"],
+  "parotta": ["wheat flour", "egg", "oil", "salt"],
+  "pizza": ["wheat flour", "cheese", "tomato sauce", "yeast", "olive oil"],
+  "puttu_kadala": ["rice flour", "coconut", "black chickpeas", "salt"],
+  "samosa": ["wheat flour", "potato", "peas", "spices", "oil"],
+  "sandwich": ["bread", "cheese", "vegetables", "mayonnaise"],
+  "unni_appam": ["rice flour", "banana", "jaggery", "coconut", "cardamom"],
+  "vada_sambar": ["urad dal", "lentils", "spices", "oil"],
+  "waffles": ["wheat flour", "egg", "milk", "butter", "sugar", "baking powder"]
 }

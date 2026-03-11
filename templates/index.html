@@ -114,7 +114,7 @@
     }
 
     .camera-controls {
-      display: flex; align-items: center; justify-content: space-between;
+      display: flex; align-items: center; justify-content: space-between;;
       padding: 14px 0 4px;
     }
     .cam-btn {
@@ -122,16 +122,16 @@
       border-radius: 10px; padding: 9px 14px;
       font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 600;
       color: var(--muted); cursor: pointer; transition: all 0.2s;
-      display: flex; align-items: center; gap: 6px;
+      display: flex; align-items: center; gap: 1px;
     }
     .cam-btn:hover { border-color: var(--accent); color: var(--accent); }
 
     .btn-capture {
-      width: 58px; height: 58px; border-radius: 50%;
-      background: var(--accent); border: none; cursor: pointer;
+      width: 50px; height: 40px; border-radius: 20%;
+      background: white; border: none; cursor: pointer;
       display: flex; align-items: center; justify-content: center;
       font-size: 22px; transition: all 0.2s;
-      box-shadow: 0 4px 16px rgba(212,92,30,0.4);
+      box-shadow: 0 4px 16px rgba(47, 40, 36, 0.4);
     }
     .btn-capture:hover { background: #b84d18; transform: scale(1.05); }
     .btn-capture:active { transform: scale(0.95); }
@@ -254,11 +254,19 @@
           <div class="camera-hint">Point camera at your food</div>
         </div>
         <div class="camera-controls">
-          <button class="cam-btn" onclick="flipCamera()">🔄 Flip</button>
-          <button class="btn-capture" id="captureBtn" onclick="capturePhoto()" title="Take Photo">📸</button>
-          <button class="cam-btn" onclick="stopCamera(); switchMode('upload')">⬆️ Upload</button>
+          <button class="cam-btn" onclick="flipCamera()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-switch-camera-icon lucide-switch-camera"><path d="M11 19H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"/><path d="M13 5h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-5"/><circle cx="12" cy="12" r="3"/><path d="m18 22-3-3 3-3"/><path d="m6 2 3 3-3 3"/>
+            </svg> 
+          </button>
+          <button class="btn-capture" id="captureBtn" onclick="capturePhoto()" title="Take Photo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="BLACK" width="26" height="26">
+              <path d="M12 9a3.75 3.75 0 1 0 0 7.5A3.75 3.75 0 0 0 12 9Z" />
+              <path fill-rule="evenodd" d="M9.344 3.071a49.52 49.52 0 0 1 5.312 0c.967.052 1.83.585 2.332 1.39l.821 1.317c.24.383.645.643 1.11.71.386.054.77.113 1.152.177 1.432.239 2.429 1.493 2.429 2.909V18a3 3 0 0 1-3 3h-15a3 3 0 0 1-3-3V9.574c0-1.416.997-2.67 2.429-2.909.382-.064.766-.123 1.151-.178a1.56 1.56 0 0 0 1.11-.71l.822-1.315a2.942 2.942 0 0 1 2.332-1.39ZM6.75 12.75a5.25 5.25 0 1 1 10.5 0 5.25 5.25 0 0 1-10.5 0Zm12-1.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" />
+            </svg>
+
+          </button>
         </div>
-      </div>
+      </div>  
 
       <!-- Camera not supported -->
       <div class="camera-error" id="cameraError">
