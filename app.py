@@ -16,21 +16,30 @@ def build_model(num_classes):
         include_top=False,
         weights=None
     )
+
     base_model.trainable = False
+
     model = models.Sequential([
         base_model,
         layers.GlobalAveragePooling2D(),
+        layers.Dense(256, activation='relu'),
+        layers.Dropout(0.3),
+        layers.Dense(128, activation='relu'),
+        layers.Dropout(0.2),
         layers.Dense(num_classes, activation='softmax')
     ])
+
     return model
 
 # ── Load everything at startup ──
 print("Loading model...")
 with open('class_names.json') as f:
     class_names = json.load(f)
+    print("Class count:", len(class_names))
+print(class_names)
 
-model = build_model(26)   # ← hardcode 26 to match trained weights
-model.load_weights('food_model.weights.h5')
+model = build_model(len(class_names)) 
+model.load_weights('best_phase2.weights.h5')
 print(f"✅ Ready! {len(class_names)} classes loaded.")
 
 with open('ingredients.json') as f:
@@ -120,6 +129,18 @@ def predict():
         for i in top3_indices
     ]
 
+    # Handle non-food or low confidence
+    if dish_name == "non_food" or confidence < 60:
+        return jsonify({
+            "error": "No food detected. Upload a clearer image.",
+            "dish": "No food detected",
+            "confidence": round(confidence, 1),
+            "top3": top3,
+            "ingredients": [],
+            "triggered": [],
+            "risk_level": "SAFE"
+        })
+
     # Run allergen check
     result = check_allergens(dish_name, user_allergens)
 
@@ -131,7 +152,6 @@ def predict():
         "triggered": result["triggered"],
         "risk_level": result["risk_level"]
     })
-
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=7860, debug=False)

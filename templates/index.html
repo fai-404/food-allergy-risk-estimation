@@ -311,18 +311,17 @@
 
 <script>
   // ── State ──
-  const allergensList = [
-    { id: 'milk',      label: 'Milk',        icon: '🥛' },
-    { id: 'curd',      label: 'Curd',        icon: '🫙' },
-    { id: 'butter',    label: 'Butter/Ghee', icon: '🧈' },
-    { id: 'eggs',      label: 'Eggs',        icon: '🥚' },
-    { id: 'gluten',    label: 'Gluten',      icon: '🌾' },
-    { id: 'nuts',      label: 'Nuts',        icon: '🥜' },
-    { id: 'fish',      label: 'Fish',        icon: '🐟' },
-    { id: 'shellfish', label: 'Shellfish',   icon: '🦐' },
-    { id: 'coconut',   label: 'Coconut',     icon: '🥥' },
-    { id: 'spices',    label: 'Spices',      icon: '🌶️' },
-  ];
+ const allergensList = [
+  { id: 'dairy', label: 'Dairy', icon: '🥛' },
+  { id: 'eggs', label: 'Eggs', icon: '🥚' },
+  { id: 'gluten', label: 'Gluten', icon: '🌾' },
+  { id: 'nuts', label: 'Nuts', icon: '🥜' },
+  { id: 'fish', label: 'Fish', icon: '🐟' },
+  { id: 'shellfish', label: 'Shellfish', icon: '🦐' },
+  { id: 'coconut', label: 'Coconut', icon: '🥥' },
+  { id: 'soy', label: 'Soy', icon: '🫘' },
+  { id: 'spices', label: 'Spices', icon: '🌶️' }
+];
   let selected = new Set();
   let hasImage = false;
   let capturedBlob = null;
