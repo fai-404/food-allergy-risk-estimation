@@ -3,7 +3,7 @@
   "beaf_steak": ["beef", "butter", "pepper", "garlic", "salt"],
   "biriyani": ["rice", "chicken", "yogurt", "ghee", "onion", "spices"],
   "chapati": ["wheat flour", "water", "salt"],
-  "chicken_fry": ["chicken", "chili powder", "turmeric", "garlic", "oil", "salt"],
+  "chicken_fry": ["chicken", "chili powder", "turmeric", "garlic", "oil", "salt","spices"],
   "chicken_gravy": ["chicken", "onion", "tomato", "garlic", "ginger", "spices", "oil"],
   "cupcake": ["wheat flour", "egg", "milk", "butter", "sugar", "baking powder"],
   "egg_omlet": ["egg", "onion", "pepper", "salt", "oil"],
