@@ -34,7 +34,7 @@ If a match is found, the system warns the user about the allergy risk.
 How to Run the Project
 ------------------------
 1. Clone the repository
-git clone https://github.com/yourusername/food-allergy-risk-estimation.git
+git clone https://github.com/fai-404/food-allergy-risk-estimation.git
 2. Install dependencies
 pip install -r requirements.txt
 3. Run the Flask server
@@ -44,7 +44,3 @@ Machine Learning Model
 The system uses a convolutional neural network based on MobileNetV2 architecture to classify food ingredients from images. The model was trained on a dataset of spice and ingredient images and exported as a .h5 weights file.
 
 
-
-Author
-
-Faheem Fai
