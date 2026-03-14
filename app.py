@@ -131,6 +131,18 @@ def predict():
         for i in top3_indices
     ]
 
+    # Handle non-food or low confidence
+    if dish_name == "non_food" or confidence < 60:
+        return jsonify({
+            "error": "No food detected. Upload a clearer image.",
+            "dish": "No food detected",
+            "confidence": round(confidence, 1),
+            "top3": top3,
+            "ingredients": [],
+            "triggered": [],
+            "risk_level": "SAFE"
+        })
+
     # Run allergen check
     result = check_allergens(dish_name, user_allergens)
 
