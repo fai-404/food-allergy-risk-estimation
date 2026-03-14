@@ -10,6 +10,7 @@ import io
 app = Flask(__name__)
 
 # ── Build model architecture ──
+# ── Build model architecture ──
 def build_model(num_classes):
     base_model = MobileNetV2(
         input_shape=(224, 224, 3),
@@ -58,6 +59,7 @@ def preprocess_image(image_bytes):
     return img_array
 
 
+
 # ── Helper: rule engine ──
 def check_allergens(dish_name, user_allergens):
     dish_ingredients = ingredients_db.get(dish_name, [])
@@ -71,7 +73,7 @@ def check_allergens(dish_name, user_allergens):
                     "allergen": allergen,
                     "found_ingredient": ing
                 })
-                break
+                
 
     count = len(triggered)
     if count == 0:
@@ -129,18 +131,6 @@ def predict():
         for i in top3_indices
     ]
 
-    # Handle non-food or low confidence
-    if dish_name == "non_food" or confidence < 60:
-        return jsonify({
-            "error": "No food detected. Upload a clearer image.",
-            "dish": "No food detected",
-            "confidence": round(confidence, 1),
-            "top3": top3,
-            "ingredients": [],
-            "triggered": [],
-            "risk_level": "SAFE"
-        })
-
     # Run allergen check
     result = check_allergens(dish_name, user_allergens)
 
@@ -152,6 +142,7 @@ def predict():
         "triggered": result["triggered"],
         "risk_level": result["risk_level"]
     })
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=7860, debug=False)
